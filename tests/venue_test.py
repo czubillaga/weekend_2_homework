@@ -12,8 +12,8 @@ class TestVenue(unittest.TestCase):
         self.song2 = Song("Kodak Black", "Tunnel Vision")
         self.guest1 = Guest("Carlos Zubillaga", self.song1)
         self.guest2 = Guest("Oscar Webber", self.song2 )
-        self.room1 = Room([self.song1], [self.guest1])
-        self.room2 = Room([self.song2], [self.guest2])
+        self.room1 = Room([self.song1], [self.guest1], 6)
+        self.room2 = Room([self.song2], [self.guest2], 6)
         self.venue = Venue("Karaoke Bar", [self.room1, self.room2], 1000)
 
     def test_venue_properties(self):
