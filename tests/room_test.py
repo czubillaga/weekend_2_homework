@@ -10,9 +10,9 @@ class TestRoom(unittest.TestCase):
         self.song1 = Song("Frank Ocean", "Godspeed")
         self.song2 = Song("Kodak Black", "Tunnel Vision")
         self.song3 = Song("Carpenters", "Close To You")
-        self.guest1 = Guest("Carlos Zubillaga", self.song1)
-        self.guest2 = Guest("Oscar Webber", self.song2)
-        self.guest3 = Guest("Josue Tamez", self.song3)
+        self.guest1 = Guest("Carlos Zubillaga", self.song1, 10)
+        self.guest2 = Guest("Oscar Webber", self.song2, 10)
+        self.guest3 = Guest("Josue Tamez", self.song3, 10)
         self.room = Room([], [], 2)
 
     def test_check_in_guests(self):

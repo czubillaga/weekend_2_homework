@@ -7,7 +7,7 @@ class TestGuest(unittest.TestCase):
 
     def setUp(self):
         self.favourite_song = Song("Frank Ocean", "Godspeed")
-        self.guest = Guest("Carlos Zubillaga", self.favourite_song)
+        self.guest = Guest("Carlos Zubillaga", self.favourite_song, 10)
 
     def test_guest_has_name(self):
         self.assertEqual("Carlos Zubillaga", self.guest.name)
@@ -15,3 +15,7 @@ class TestGuest(unittest.TestCase):
     def test_guest_has_favourite_song(self):
         self.assertEqual("Godspeed", self.favourite_song.title)
         self.assertEqual("Frank Ocean", self.favourite_song.artist)
+
+    def test_guest_wallet(self):
+        self.guest.adjust_wallet(-5)
+        self.assertEqual(5, self.guest.wallet)
