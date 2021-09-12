@@ -2,6 +2,7 @@ import unittest
 
 from src.guest import Guest
 from src.song import Song
+from src.room import Room
 
 class TestGuest(unittest.TestCase):
 
@@ -19,3 +20,7 @@ class TestGuest(unittest.TestCase):
     def test_guest_wallet(self):
         self.guest.adjust_wallet(-5)
         self.assertEqual(5, self.guest.wallet)
+
+    def test_guest_will_cheer(self):
+        room = Room([self.favourite_song], [self.guest], 5)
+        self.assertEqual("Whoo!", self.guest.cheer_for_song(room))

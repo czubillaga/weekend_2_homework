@@ -7,3 +7,7 @@ class Guest:
 
     def adjust_wallet(self, amount):
         self.wallet += amount
+
+    def cheer_for_song(self, room):
+        if self.favourite_song in room.songs:
+            return "Whoo!"
