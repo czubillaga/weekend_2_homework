@@ -11,3 +11,6 @@ class Guest:
     def cheer_for_song(self, room):
         if self.favourite_song in room.songs:
             return "Whoo!"
+
+    def buy(self, bar, item):
+        bar.sell(self.name, item)

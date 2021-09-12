@@ -1,3 +1,5 @@
+from src.bar import Bar
+
 class Room:
 
     def __init__(self, songs, guests, capacity):
@@ -5,6 +7,7 @@ class Room:
         self.guests = guests
         self.capacity = capacity
         self.entry_fee = 5
+        self.bar = Bar(1000)
 
     def check_in(self, guest):
         if len(self.guests) < self.capacity:
